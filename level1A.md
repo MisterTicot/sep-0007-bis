@@ -18,10 +18,10 @@ rejecting the request.
 
 ## Parameters
 
-* **Generic base parameters:** mode, network
-* **Generic extension parameters (optional):** horizon, callback, signature,
+* *Generic base parameters:* mode, network
+* *Generic extension parameters (optional):* horizon, callback, signature,
   signer
-* **TxHash base parameter:** txhash
+* *TxHash base parameter:* txhash
 
 ### Generic Base Parameters (mandatory)
 
@@ -32,7 +32,7 @@ rejecting the request.
 ### Generic Extension Parameters (optional)
 
 * When dealing with validated transactions, **callback** parameter may be
-  meaningless. Implementators are free to reject it when relevant.
+  meaningless. Implementators are free to reject it when irrelevant.
 
 ### TxHash Base Parameters (mandatory)
 

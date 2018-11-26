@@ -10,7 +10,7 @@
 HTTP transaction request can be signed for authentication/integrity checking
 purpose.
 
-*Note:* This is an extension and is not mandatory for a service to be said
+**Note:** This is an extension and is not mandatory for a service to be said
 compliant with this SEP. Services that doesn't wish to support that extension
 can strip out the related parameters and continue with their workflow. However,
 they must tell the user about it.

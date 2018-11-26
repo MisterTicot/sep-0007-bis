@@ -22,16 +22,15 @@ rejecting the request.
    `pathPayment` operation. Else, it can use a `payment` operation.
 
 **Note:** Implementors are free to partially implement this functionality by
-using only `payment` operations or by restricting asset to allow only Stellar
-Lumens for donations. A partially implemented donation feature is better than
-nothing at all.
+using only `payment` operations or by supporting only native asset donations. A
+partially implemented donation feature is better than nothing at all.
 
 ## Parameters
 
-* **Generic base parameters:** mode, network
-* **Generic extension parameters (optional):** horizon, callback, signature,
+* *Generic base parameters:* mode, network
+* *Generic extension parameters (optional):* horizon, callback, signature,
   signer
-* **Donation request mandatory parameters:** destination
+* *Donation request mandatory parameters:* destination
 
 ### Generic Base Parameters (mandatory)
 
@@ -39,7 +38,7 @@ nothing at all.
 
 ### Payment Request Mandatory Parameters (mandatory)
 
-**destination: ${publicKey|federatedAddress}**
+**destination:** ${publicKey|federatedAddress}
 
 This is the destination of the donation.
 

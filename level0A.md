@@ -10,14 +10,14 @@
 Those are generic parameters that are valid for most (or all) of the Level1 &
 Level2 modules.
 
-* **Base parameters:** mode, network
-* **Extension parameters:** horizon, callback
+* *Base parameters:* mode, network
+* *Extension parameters:* horizon, callback
 
 ## Base Parameters (mandatory)
 
-**mode: {String}**
+**mode:** {String}
 
-The mode parameter indicates whic Level1 or Level2 module is being used to pass
+The mode parameter indicates which Level1 or Level2 module is being used to pass
 the transaction.
 
 ```
@@ -31,7 +31,7 @@ mode=xdr&...
 * Request must be rejected if this parameter is missing.
 * Request must be rejected if this parameter value is invalid.
 
-**network: "public"|"test"|${network_passphrase}|undefined**
+**network:** "public"|"test"|${network_passphrase}|undefined
 
 The network parameter indicates the network on which the passed transaction is
 valid. When no network is given, the transaction is said "network-independent".
@@ -45,7 +45,7 @@ mode=...&network=public
 ```
 
 You are free to support only part of the networks. If you do so, you must
-explicitely reject any transaction that use a network you don't support.
+explicitly reject any transaction that use a network you don't support.
 
 Network-independent transactions are a feature that makes sense for wallets.
 When receiving a network-independent transaction request (such as `set
@@ -53,12 +53,12 @@ homeDomain to: 'stellar.org'`), wallets can either choose a network on the
 behalf of the user (for example when it only support public network), or to let
 the user choose any account of any network for signing.
 
-Services for which network-indepent transaction passing doesn't makes sense, or
-that doesn't support them, must reject them explicitely.
+Services for which network-independent transaction passing doesn't makes sense, or
+that doesn't support them, must reject them explicitly.
 
 ## Extension Parameters (optional)
 
-**horizon: {URL}**
+**horizon:** {URL}
 
 The horizon parameter indicate the URL of a fallback Horizon node for a custom
 network.
@@ -71,7 +71,7 @@ mode=...&network=custom&horizon=horizon-custom.example.org
 { mode: ..., network: "custom", horizon: "horizon-custom.example.org" }
 ```
 
-Implementators must pay attention to the fact that **wrongly implementing this
+Implementors must pay attention to the fact that **wrongly implementing this
 parameter could lead to serious security flaws**. Indeed, a transaction emitter
 could leverage the power of passing a malicious horizon node to abuse the user
 by various means.
@@ -89,9 +89,9 @@ parameter must never be used for public & test networks**.
 * Request must be rejected if this parameter is used for a network-independent
   transaction.
 
-**callback: {URL}**
+**callback:** {URL}
 
-The callback parameter indicates when the signed transaction must be sent.
+The callback parameter indicates where the signed transaction must be sent.
 
 ```js
 // Query String
